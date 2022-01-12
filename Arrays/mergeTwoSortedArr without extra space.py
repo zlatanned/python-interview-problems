@@ -1,5 +1,4 @@
 from typing import List
-from math import ceil
 
 class Solution:
     def mergeArrays(self, nums1:List[int], m:int, nums2:List[int], n:int) -> List[int]:
