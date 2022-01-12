@@ -1,7 +1,14 @@
 from typing import List
 
 class Solution:
-    def mergeArrays(self, nums1:List[int], m:int, nums2:List[int], n:int) -> List[int]:
+    """
+        A more pythonic soln. could be:
+
+        def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+            nums1[m:]=nums2[:n]
+            nums1.sort()
+    """
+    def mergeArrays(self, nums1:List[int], m:int, nums2:List[int], n:int) -> None:
         while m > 0 and n > 0:
             if nums1[m-1] >= nums2[n-1]:
                 nums1[m+n-1] = nums1[m-1]
